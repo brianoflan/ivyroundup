@@ -20,22 +20,26 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <!--
     <property name="archive" value="${name}-core-${revision}"/>
-
     <resource url="http://www.scaleunlimited.com/downloads/${name}/bixo-dist-${revision}.tgz" sha1="722fb303d2e383236f44385ec4b5cfcfc41f302a" />
+    -->
+    <resource 
+      url="http://cdn.leafletjs.com/downloads/${archive}.zip" 
+      sha1="0d19209c71db54caa4d7da7750f9fbd4dbc140ac"
+    />
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <!-- source .js -->
+        <move file="archive/${name}-src.js" tofile="artifacts/sources/${name}-src.js"/>
 
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/src/main/java"/>
-        </zip>
+        <!-- core .js -->
+        <move file="archive/${name}.js" tofile="artifacts/libs/${name}.js"/>
 
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/doc/javadoc"/>
-        </zip>
+        <!-- core .css -->
+        <move file="archive/${name}.css" tofile="artifacts/stylesheets/${name}.css"/>
+
     </build>
 
 </packager-module>

@@ -18,42 +18,36 @@
 
 <ivy-module>
 
-    <info publication="20131025134300">
-        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <description homepage="http://openbixo.org/">
-
-            <p>
-            Bixo is a flexable open source web mining toolkit that runs as a series of customizable Cascading pipes, which can be run on a single machine or on top of Hadoop. 
-            </p>
-
+    <info publication="20140523000000">
+        <license name="BSD-like" url="https://github.com/Leaflet/Leaflet/blob/master/LICENSE" />
+        <description homepage="http://com.leafletjs/">
         </description>
     </info>
 
     <configurations>
-        <conf name="core" description="Core requirements"/>
-        <conf name="hadoop" extends="core" description="Hadoop support"/>
-        <conf name="local" extends="core" description="Standalone support"/>
-        <conf name="default" extends="hadoop,local" description="Hadoop and standalone support"/>
-        <conf name="app" extends="core" description="Support for the commandline application" />
+        <conf name="core" description="core"/>
+        <conf name="source" description="source"/>
+        <conf name="default" extends="full" description="default"/>
+        <conf name="full" extends="core" description="default"/>
     </configurations>
 
     <publications>
-        <artifact conf="core"/>
-        <artifact conf="core" name="source" type="source" ext="zip" />
-        <artifact conf="core" name="javadoc" type="javadoc" ext="zip" />
+        <artifact conf="core" name="leaflet" type="lib" ext="js" />
+        <artifact conf="core" name="leaflet" type="stylesheet" ext="css" />
+        <!--
+        <artifact conf="full" name="layers-2x" type="image" ext="png" />
+        <artifact conf="full" name="layers" type="image" ext="png" />
+        <artifact conf="full" name="marker-icon-2x" type="image" ext="png" />
+        <artifact conf="full" name="marker-icon" type="image" ext="png" />
+        <artifact conf="full" name="marker-shadow" type="image" ext="png" />
+        -->
+        <artifact conf="source" name="leaflet-src" type="source" ext="js" />
     </publications>
 
     <dependencies>
-        <dependency org="cascading" name="cascading" rev="2.2.0" conf="core->core;local->local;hadoop->hadoop"/>
-        <dependency org="com.scaleunlimited" name="cascading-utils" rev="2.1.5" conf="core->default"/>
-        <dependency org="org.apache.httpcomponents" name="httpcore" rev="4.2.4" conf="core->core"/>
-        <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.2.5" conf="core->client,mime"/>
-        <dependency org="org.apache.tika" name="tika" rev="1.4" conf="core->default" />
-        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.14,1.3)" conf="core->default"/>
-        <dependency org="org.apache.commons" name="commons-lang" rev="[2.4,3.0)" conf="core->default"/>
-        <dependency org="org.apache.commons" name="commons-io" rev="[2.1,3.0)" conf="core->default"/>
-        <dependency org="net.java.dev.args4j" name="args4j" rev="2.0.+" conf="app->default"/>
+        <!--
         <dependency org="org.slf4j" name="slf4j" rev="1.7.2" conf="core->log4j"/>
+        -->
     </dependencies>
 
 </ivy-module>
