@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2015-08-13 03:07:03 UTC</timestamp>
+  <timestamp>2015-08-13 04:57:06 UTC</timestamp>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -475,6 +475,7 @@
   </org>
   <org name="com.jquery">
     <mod name="jquery">
+      <rev name="1.11.1"/>
       <rev name="1.6.2"/>
     </mod>
   </org>
