@@ -36,12 +36,12 @@
     <publications>
         <artifact conf="core" name="leaflet" type="lib" ext="js"/>
         <artifact conf="core" name="leaflet" type="stylesheet" ext="css"/>
+        <artifact conf="full" name="layers-2x" type="image" ext="png"/>
+        <artifact conf="full" name="layers" type="image" ext="png"/>
+        <artifact conf="full" name="marker-icon-2x" type="image" ext="png"/>
+        <artifact conf="full" name="marker-icon" type="image" ext="png"/>
+        <artifact conf="full" name="marker-shadow" type="image" ext="png"/>
         <!--
-        <artifact conf="full" name="layers-2x" type="image" ext="png" />
-        <artifact conf="full" name="layers" type="image" ext="png" />
-        <artifact conf="full" name="marker-icon-2x" type="image" ext="png" />
-        <artifact conf="full" name="marker-icon" type="image" ext="png" />
-        <artifact conf="full" name="marker-shadow" type="image" ext="png" />
         -->
         <artifact conf="source" name="leaflet-src" type="source" ext="js"/>
     </publications>

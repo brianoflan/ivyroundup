@@ -35,6 +35,13 @@
         <!-- core .css -->
         <move file="archive/${name}.css" tofile="artifacts/stylesheets/${name}.css"/>
 
+        <!-- images -->
+        <move file="archive/images/layers-2x.png" tofile="artifacts/images/layers-2x.png"/>
+        <move file="archive/images/layers.png" tofile="artifacts/images/layers.png"/>
+        <move file="archive/images/marker-icon-2x.png" tofile="artifacts/images/marker-icon-2x.png"/>
+        <move file="archive/images/marker-icon.png" tofile="artifacts/images/marker-icon.png"/>
+        <move file="archive/images/marker-shadow.png" tofile="artifacts/images/marker-shadow.png"/>
+
     </build>
 
 </packager-module>
