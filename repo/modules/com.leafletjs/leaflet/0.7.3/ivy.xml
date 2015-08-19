@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.leafletjs" module="leaflet" revision="0.7.3" status="release" publication="20140523000000">
+        <license name="BSD-like" url="https://github.com/Leaflet/Leaflet/blob/master/LICENSE"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.leafletjs/leaflet/0.7.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://com.leafletjs/">
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="core"/>
+        <conf name="source" description="source"/>
+        <conf name="default" extends="full" description="default"/>
+        <conf name="full" extends="core" description="full"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="core" name="leaflet" type="lib" ext="js"/>
+        <artifact conf="core" name="leaflet" type="stylesheet" ext="css"/>
+        <artifact conf="full" name="layers-2x" type="image" ext="png"/>
+        <artifact conf="full" name="layers" type="image" ext="png"/>
+        <artifact conf="full" name="marker-icon-2x" type="image" ext="png"/>
+        <artifact conf="full" name="marker-icon" type="image" ext="png"/>
+        <artifact conf="full" name="marker-shadow" type="image" ext="png"/>
+        <!--
+        -->
+        <artifact conf="source" name="leaflet-src" type="source" ext="js"/>
+    </publications>
+
+    <!--
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7.2" conf="core->log4j"/>
+    </dependencies>
+    -->
+
+</ivy-module>
