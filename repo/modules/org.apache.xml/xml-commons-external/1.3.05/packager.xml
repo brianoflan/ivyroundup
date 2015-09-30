@@ -19,9 +19,20 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
-
+    <!--
     <resource url="http://archive.apache.org/dist/xml/commons/${archive}-bin.zip" sha1="a4c7de32686afa5802a3165c4a818a0b068d4648"/>
     <resource url="http://archive.apache.org/dist/xml/commons/${archive}-src.zip" sha1="2c1eaedd7b2f600fe81d493272ab597dcec18574"/>
+    -->
+    
+    <!--
+    <property name="baseUrl" value="http://archive.apache.org/dist/xml/commons"/>
+    <resource url="${baseUrl}/${archive}-bin.zip" sha1="a4c7de32686afa5802a3165c4a818a0b068d4648"/>
+    <resource url="${baseUrl}/${archive}-src.zip" sha1="2c1eaedd7b2f600fe81d493272ab597dcec18574"/>
+    -->
+    
+    <property name="baseUrl" value="http://www.motorlogy.com/apache/xerces/xml-commons"/>
+    <resource url="${baseUrl}/${archive}-bin.zip" sha1="a4c7de32686afa5802a3165c4a818a0b068d4648"/>
+    <resource url="${baseUrl}/${archive}-src.zip" sha1="2c1eaedd7b2f600fe81d493272ab597dcec18574"/>
 
     <build>
         <!-- jar -->
