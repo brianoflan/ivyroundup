@@ -1,6 +1,11 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2015-09-30 19:25:26 UTC</timestamp>
+  <timestamp>2015-10-01 04:31:52 UTC</timestamp>
+  <org name="com.amazon.aws">
+    <mod name="ec2-api-tools">
+      <rev name="1.7.5.1"/>
+    </mod>
+  </org>
   <org name="com.jquery">
     <mod name="jquery">
       <rev name="1.11.1"/>
