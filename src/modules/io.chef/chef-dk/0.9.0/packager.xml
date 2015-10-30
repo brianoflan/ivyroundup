@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Brian Flannery
+    
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}/archive/${revision}"/>
+    <property name="baseUrl" value="https://github.com/chef"/>
+    <!--
+    https://github.com/chef/chef-dk/archive/0.9.0.tar.gz
+    -->
+
+    <resource 
+      url="${baseUrl}/${archive}.tar.gz" 
+      sha1="37dce92bb93a66b72b6ece44f0902ddbb4d2f68b"
+    />
+    <build>
+        <tar destfile="artifacts/tools/${name}.tar" basedir="archive" >
+        </tar>
+        <gzip destfile="artifacts/tools/${name}.tar.gz" src="artifacts/tools/${name}.tar" >
+        </gzip>
+    </build>
+
+</packager-module>
